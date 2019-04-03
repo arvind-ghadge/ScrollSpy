@@ -26,6 +26,8 @@
 		.blog-page-sidebar .scrolling ul li span {     color: #3e3e3e;     left: 0;     position: absolute;     top: -1px; letter-spacing:0;}
 		.blog-page-sidebar .sidebar-widget .scrolling ul li span.title {     border-bottom: 1px solid #3e3e3e;     display: block;     font-family: "Montserrat",Helvetica,sans-serif;     margin:0px;     padding: 0 0 10px;     position: static; }
 		
+		#scroll-links ul li a.active {color:red;}
+		
 		/*.panel-heading,.panel-body {padding:0;}*/
 	</style>
 </head>
@@ -673,7 +675,174 @@ Lorem ipsum dolor sit amet
 Lorem ipsum dolor sit amet  
 Lorem ipsum dolor sit amet  
 Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
 Lorem ipsum dolor sit amet  Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet  
+Lorem ipsum dolor sit amet
+Lorem ipsum dolor sit amet  
 Lorem ipsum dolor sit amet  
 Lorem ipsum dolor sit amet  
 Lorem ipsum dolor sit amet  
@@ -691,19 +860,20 @@ Lorem ipsum dolor sit amet
 Lorem ipsum dolor sit amet  
 Lorem ipsum dolor sit amet  
 </p>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
 <script>
 
-$(window).load(function(){
+$(document).ready(function(){
 	var panel = document.querySelectorAll(".tab-section .panel .panel-collapse")
 	$(".scrolling li a").click(function(e) {
 		if($(".tab-section .panel").find("div").hasClass("panel-collapse")){
 			for(i=0;i<panel.length;i++){
 				if(panel[i].getAttribute("id") == $(this).attr("class") ){
 					if($(".tab-section .panel .panel-collapse").eq(i).hasClass("in")){
-						return false
+						return false;
 					}
 					$(".tab-section .panel-collapse").collapse("hide");
 					$(".tab-section .panel .panel-collapse").eq(i).collapse("show");
@@ -714,16 +884,23 @@ $(window).load(function(){
 		}
 	});
 	
+	$("#scroll-links ul li a").click(function(){
+		$("#scroll-links ul li a").parent("li").siblings().children("a").removeClass("active");
+		$(this).addClass("active");
+	});
+	
 	$(".tab-section .panel h4 a").click(function(){
 		$(".tab-section .panel .panel-collapse").collapse("hide");
+	});
+	
+	$('.scrolling a[href^="#"]').click(function(e) {
+		$('html,body').animate({ scrollTop: $(this.hash).offset().top-55}, 500);
+		return false;
 	});
 
 });
 
-$('.scrolling a[href^="#"]').click(function(e) {
-	$('html,body').animate({ scrollTop: $(this.hash).offset().top-55}, 500);
-	return false;
-});
+
 
 </script>
 </body>
